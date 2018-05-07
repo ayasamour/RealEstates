@@ -1,0 +1,150 @@
+
+#h{
+	width: 40px;
+	border-width: 1px;
+	border-color: black;
+}
+
+
+
+#Approch{
+	width: 80%;
+	margin: auto;
+}
+
+
+#Approch{
+	background-color:#EBEBEB;
+
+}
+
+#a1{
+	padding-top: 10px;
+	text-align: center;
+}
+
+#a2{
+	color:white;
+	padding-top: 10px;
+	text-align: center;
+}
+#a2 p{
+	color:rgba(255,255,255,0.8);
+}
+
+.m1{
+   width: 300px;
+   height: 200px;
+}
+
+#third{
+	padding-left: 130px;
+}
+
+#th1{
+   width: 90%;
+   background-color: white;
+   height:200px;
+}
+
+#image{
+	display: inline-block;
+	width: 40%;
+}
+
+#content{
+	margin-top: 20px;
+	display: inline-block;
+	width: 60%;
+	vertical-align: top;
+	font-family: monospace;
+}
+
+
+#th2{
+   width: 90%;
+   background-color: white;
+   height:200px;
+}
+
+
+#image2{
+	display: inline-block;
+	width: 40%;
+	text-align: right;
+}
+
+
+#content2{
+	margin-top: 20px;
+	display: inline-block;
+	width: 60%;
+	vertical-align: top;
+	text-align: right;
+	font-family: monospace;
+}
+
+#w{
+	color:#7F7F7F;
+}
+
+#a1 h2{
+	font-family: monospace;
+}
+
+#a1 p {
+	font-family: monospace;
+	color:#7F7F7F;
+}
+
+.m{
+	width: 210px;
+	height: 200px;
+}
+#four{
+	margin-left: 130px;
+	
+}
+
+#five{
+	margin-left: 130px;
+	position: relative;
+	top: -3px;
+
+}
+.con{
+	vertical-align: top;
+	width: 210px;
+	height: 200px;
+	background-color: #EA4C4C;
+	display: inline-block;
+}
+
+.imge3{
+	display: inline-block;
+}
+
+.con h3 {
+	color: white;
+	text-align: center;
+	padding-top: 60px;
+}
+
+.container p{
+	margin-top:-15px;
+}
+ .con h5 {
+ 	color: white;
+	text-align: center;
+	margin-top:-15px;
+ }
+
+#first p {
+	margin-top:-15px;
+}
+#a1 p {
+	margin-top:-15px;
+}
+ #a2 p {
+ 	margin-top:-15px;
+ }

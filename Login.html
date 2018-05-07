@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>
+       body{
+           background-image: url(img/background.jpg);
+           background-attachment:fixed;
+           background-size:cover;
+       }
+       #wrapper{
+          position: absolute;
+          margin: 30px auto;
+          right: 0;
+          left: 0;
+          width: 50%;
+          background-color: rgba(147, 184, 189,0.8);
+          border-radius: 10px;
+        }
+       #wrapper label{
+            padding: 5px;
+            color: #fff;
+            position: relative;
+            font-size: 15px;
+            background-color: rgba(3,155,230,0.5);
+            border-radius: 10px;
+        }
+       .form-row{
+           margin: 7px;
+       } 
+       
+   </style>
+</head>
+<body>
+<div class="container">
+    <div class="row" style="text-align: center">
+        <h1 class="col-sm-12">
+            <a href="index.html">
+                <img src="img/logo.PNG" class="img-circle" width="110px" height="110px">
+            </a>
+        </h1>
+    </div>                
+<form id="wrapper"> 
+  <div class="form-row">   
+    <div class="form-group">
+      <label for="Email">Email</label>
+      <input type="email" class="form-control" id="Email" placeholder="Enter Your Email">
+    </div>
+    <div class="form-group">
+      <label for="Password">Password</label>
+      <input type="password" class="form-control" id="Password" placeholder="Your Password">
+    </div>
+  </div>
+    
+  <div class="form-row">   
+    <div class="form-group col-sm-6">
+        <h4><button type="submit" class="btn btn-warning"> Login </button></h4>
+    </div>
+    <div class="form-group col-sm-6" style="text-align: right">
+        <h4 style="color:rgba(72,66,70,0.6)"> Not a member yet ?
+            <a href="Sign-Up.html" class="btn btn-warning"> Go and Sign Up </a>
+        </h4>
+    </div>
+  </div>
+    
+</form>
+</div>
+</body>
+</html>

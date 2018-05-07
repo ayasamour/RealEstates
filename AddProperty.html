@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="css/Details.css">
+
+
+        <style type="text/css">
+                #selectPropertyType{
+                  width: 30%;
+                  left: 50%;
+                  right: auto;
+                  text-align: center;
+                  transform: translate(-50%, 0);
+                } 
+                .image-preview-input {
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0px;    
+                    color: #333;
+                    background-color: #fff;
+                    border-color: #ccc;    
+                }
+                .image-preview-input input[type=file] {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 20px;
+                    cursor: pointer;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                }
+                .image-preview-input-title {
+                    margin-left:2px;
+                }
+
+                label{
+    /*           color: lightskyblue;*/
+                   padding: 5px;
+                   border-radius: 5px;
+                   color: #fff;
+                   position: relative;
+                   background-color: rgba(3,155,230,0.8);
+                   border-radius:10px;
+                }
+               .form-row{
+                   margin: 10px
+               }
+        </style>
+    </head>
+<body> 
+<div class="container-fluid" style="background:url(img/backgroundbody2.jpg);background-position: center;
+                                    background-repeat: no-repeat; background-size: cover">
+        <br>
+        <br>
+        <br>
+          <header class="header-login-signup">
+                <div class="row header-limiter">
+                    <div class="col-md-4">
+                        <ul>
+                            <li><a href="Login.html">Login</a></li>
+                            <li><a href="Sign-Up.html" class="btn btn-warning" role="button">Sign up</a></li>
+                        </ul>
+                        <span> </span>
+                    </div>
+                   
+                    <div class="col-md-4">
+                        <h1>
+                            <a href="index.html">
+                                <img src="img/logo.PNG" class="img-circle" width="110px" height="110px">
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="col-md-4">
+                         <form class="form-inline active-pink-4">
+                             <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                             <i class="fa fa-search" aria-hidden="true"></i>
+                         </form>
+                    </div>
+                </div>
+            </header>
+       <br>
+       <br>
+</div>
+    
+<div class="container-fluid">   
+    <nav id="navbar" class="navbar navbar-default" style="z-index:55555555;margin:0px">
+    <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+        <!--      <a class="navbar-brand" href="#">Brand</a>-->
+              <a class="navbar-brand" href="#"></a>
+        </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <ul class="nav navbar-nav navbar-right"  style="width:75%;margin:auto">
+                    <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Properties <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="AdvertisementPage.html">House</a></li>
+                            <li><a href="AdvertisementPage.html">Apartment</a></li>
+                            <li><a href="AdvertisementPage.html">Villa</a></li>
+                            <li><a href="AdvertisementPage.html">Building</a></li>
+                            <li><a href="AdvertisementPage.html">Office</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="About%20us.html">About us</a></li>
+                    <li><a href="ContactUs.html">Call Us</a></li>
+                    <li><a href="AddProperty.html" class="btn btn-warning" role="button">Add My Property</a></li>
+            </ul>
+        </div> 
+    </div><!-- /.container -->
+    </nav>
+</div> 
+<br>
+<div class=container>
+    <div class="row col-sm-12">
+       <div class="panel panel-info">
+          <div class="panel-heading"> Add Your Property </div>
+            <div class="panel-body">       
+                    <div class="panel panel-info">
+                      <div class="panel-heading"><h4> Property Information </h4></div>
+                        <div class="panel-body">
+                            
+                            <div class="container-fluid" style="margin-left: 30px;text-align: center">
+                                <div class="row col-sm-12" >
+                                  <form>
+                                    <div class="radio-inline" style="margin-right:15px">
+                                      <label style="font-size:15px"><input type="radio" name="optradio"> For Sell </label>
+                                    </div>
+                                    <div class="radio-inline" style="margin-left:15px">
+                                      <label style="font-size:15px"><input type="radio" name="optradio"> For Rent </label>
+                                    </div>
+                                  </form>
+                                </div>
+                                
+                                <div class="row col-sm-12" id="selectPropertyType">
+<!--
+                                    <div class="dropdown" style="text-align: center">
+                                        <button class="btn btn-warning dropdown-toggle" type="button" data-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                            Select Your Property Type
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" style="text-align: center" name="dbType" id="dbType">
+                                            <li  value="House"><a href="#">House</a></li>
+                                            <li value="Appartment"><a href="#">Appartment</a></li>
+                                            <li value="Villa"><a href="#">Villa</a></li>
+                                            <li value="Land"><a href="#">Land</a></li>
+                                            <li value="Building"><a href="#">Building</a></li>
+                                            <li value="Office"><a href="#">Office</a></li>
+                                        </ul>
+-->
+                                        <select name="dbType" id="dbType" class="form-control">
+                                          <option selected>Choose..</option>
+                                          <option value="House">House</option>
+                                          <option value="Appartment">Appartment</option>
+                                          <option value="Villa">Villa</option>
+                                          <option value="Land">Land</option>
+                                          <option value="Building">Building</option>
+                                          <option value="Office">Office</option>
+                                        </select>
+                                    </div>
+                                
+                            </div>
+                         
+                        </div>
+                       </div>
+                
+                <div class="panel panel-info" id="House" style="display:none">
+                    <div class="panel-heading"><h4> Please fill all these Information </h4></div>
+                        <div class="panel-body" >
+                            <div class="container-fluid" style="margin-left: 30px;text-align: left">
+                                <div class="row col-sm-12">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">City</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Region</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Neighborhood</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                      
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyPrice">Property Price ($)</label>
+                                                <input type="text" class="form-control" id="PropertyPrice" placeholder="Enter Property Price">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyArea">Property Area (m2)</label>
+                                                <input type="text" class="form-control" id="PropertyArea" placeholder="Enter Property Area">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyAge">Property Age</label>
+                                                <input type="text" class="form-control" id="PropertyAge" placeholder="Enter Property Age">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyLivingrooms">Property Livingrooms</label>
+                                                <select id="PropertyLivingrooms" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>1+</option>
+                                                    <option>2+</option>
+                                                    <option>3+</option>
+                                                    <option>4+</option>
+                                                    <option>5+</option>
+                                                </select>
+                                            </div>
+                                      
+                                            <div class="form-group col-sm-4" >
+                                                <label for="Property Livingrooms">Property Bedrooms</label>
+                                                <select id="Property Livingrooms" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>1+</option>
+                                                    <option>2+</option>
+                                                    <option>3+</option>
+                                                    <option>4+</option>
+                                                    <option>5+</option>
+                                                </select>
+                                            </div>
+                                      
+                                            <div class="form-group col-sm-4" >
+                                                <label for="Property Livingrooms">Property Bathrooms</label>
+                                                <select id="Property Livingrooms" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>1+</option>
+                                                    <option>2+</option>
+                                                    <option>3+</option>
+                                                    <option>4+</option>
+                                                    <option>5+</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Elevation</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose..</option>
+                                                    <option>East</option>
+                                                    <option>West</option>
+                                                    <option>North</option>
+                                                    <option>South</option>
+                                                    <option>North-East</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-8">  
+                                                <label for="inputState">Upload Some Pictures</label>
+                                                <div class="input-group image-preview">
+                                                    <input type="text" class="form-control image-preview-filename" disabled="disabled"> 
+                                                    <span class="input-group-btn">
+                                                        <!-- image-preview-input -->
+                                                        <div class="btn btn-default image-preview-input">
+                                                            <span class="glyphicon glyphicon-folder-open"></span>
+                                                            <span class="image-preview-input-title">Browse</span>
+                                                            <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>                                    
+  
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12" >
+                                                <label for="inputState">More Descreption</label>
+                                                <textarea class="form-control" rows="5" id="MoreDescreption"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row" style="text-align: center">
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Reset </button>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Done </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                  
+                <div class="panel panel-info" id="Appartment" style="display:none">
+                      <div class="panel-heading"><h4> Please fill all these Information </h4></div>
+                        <div class="panel-body" >
+                            <div class="container-fluid" style="margin-left: 30px;text-align: left">
+                                <div class="row col-sm-12">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4" >
+                                                <label for="inputState">City</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4" >
+                                                <label for="inputState">Region</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4" >
+                                                <label for="inputState">Neighborhood</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                      
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyPrice">Property Price ($)</label>
+                                                <input type="text" class="form-control" id="PropertyPrice" placeholder="Enter Property Price">
+                                            </div>
+                                            <div class="form-group col-sm-4" >
+                                                <label for="PropertyArea">Property Area (m2)</label>
+                                                <input type="text" class="form-control" id="PropertyArea" placeholder="Enter Property Area">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyAge">Property Age</label>
+                                                <input type="text" class="form-control" id="PropertyAge" placeholder="Enter Property Age">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4" >
+                                                <label for="PropertyLivingrooms">Property Livingrooms</label>
+                                                <select id="PropertyLivingrooms" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>1+</option>
+                                                    <option>2+</option>
+                                                    <option>3+</option>
+                                                    <option>4+</option>
+                                                    <option>5+</option>
+                                                </select>
+                                            </div>
+                                      
+                                            <div class="form-group col-sm-4" >
+                                                <label for="Property Livingrooms">Property Bedrooms</label>
+                                                <select id="Property Livingrooms" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>1+</option>
+                                                    <option>2+</option>
+                                                    <option>3+</option>
+                                                    <option>4+</option>
+                                                    <option>5+</option>
+                                                </select>
+                                            </div>
+                                      
+                                            <div class="form-group col-sm-4">
+                                                <label for="Property Livingrooms">Property Bathrooms</label>
+                                                <select id="Property Livingrooms" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>1+</option>
+                                                    <option>2+</option>
+                                                    <option>3+</option>
+                                                    <option>4+</option>
+                                                    <option>5+</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4" >
+                                                <label for="inputState">Furnished </label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose..</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4" >  
+                                                <label for="inputState">Floor Number</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                                                              <i class="fa fa-minus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100" style="text-align: center">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                                              <i class="fa fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>   
+                                            
+                                            <div class="form-group col-sm-4" >
+                                                <label for="inputState">Elevation</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose..</option>
+                                                    <option>East</option>
+                                                    <option>West</option>
+                                                    <option>North</option>
+                                                    <option>South</option>
+                                                    <option>North-East</option>
+                                                </select>
+                                            </div>
+  
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            
+                                            <div class="form-group col-sm-12" >  
+                                                <label for="inputState">Upload Some Pictures</label>
+                                                <div class="input-group image-preview">
+                                                    <input type="text" class="form-control image-preview-filename" disabled="disabled"> 
+                                                    <span class="input-group-btn">
+                                                        <!-- image-preview-input -->
+                                                        <div class="btn btn-default image-preview-input">
+                                                            <span class="glyphicon glyphicon-folder-open"></span>
+                                                            <span class="image-preview-input-title">Browse</span>
+                                                            <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>                                    
+  
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12" >
+                                                <label for="inputState">More Descreption</label>
+                                                <textarea class="form-control" rows="5" id="MoreDescreption"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row" style="text-align: center">
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Reset </button>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Done </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                   
+                <div class="panel panel-info" id="Villa" style="display:none">
+                      <div class="panel-heading"><h4> Please fill all these Information </h4></div>
+                        <div class="panel-body" >
+                            <div class="container-fluid" style="margin-left: 30px;text-align: left">
+                                <div class="row col-sm-12">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4" >
+                                                <label for="inputState">City</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Region</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Neighborhood</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                      
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4" >
+                                                <label for="PropertyPrice">Property Price ($)</label>
+                                                <input type="text" class="form-control" id="PropertyPrice" placeholder="Enter Property Price">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyArea">Property Area (m2)</label>
+                                                <input type="text" class="form-control" id="PropertyArea" placeholder="Enter Property Area">
+                                            </div>
+                                            <div class="form-group col-sm-4" >
+                                                <label for="PropertyAge">Property Age</label>
+                                                <input type="text" class="form-control" id="PropertyAge" placeholder="Enter Property Age">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4" >
+                                                <label for="PropertyLivingrooms">Property Livingrooms</label>
+                                                <select id="PropertyLivingrooms" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>1+</option>
+                                                    <option>2+</option>
+                                                    <option>3+</option>
+                                                    <option>4+</option>
+                                                    <option>5+</option>
+                                                </select>
+                                            </div>
+                                      
+                                            <div class="form-group col-sm-4">
+                                                <label for="Property Livingrooms">Property Bedrooms</label>
+                                                <select id="Property Livingrooms" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>1+</option>
+                                                    <option>2+</option>
+                                                    <option>3+</option>
+                                                    <option>4+</option>
+                                                    <option>5+</option>
+                                                </select>
+                                            </div>
+                                      
+                                            <div class="form-group col-sm-4" >
+                                                <label for="Property Livingrooms">Property Bathrooms</label>
+                                                <select id="Property Livingrooms" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>1+</option>
+                                                    <option>2+</option>
+                                                    <option>3+</option>
+                                                    <option>4+</option>
+                                                    <option>5+</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4" >
+                                                <label for="inputState">Internal Stair</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose..</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Car Intrance</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose..</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Garden</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose..</option>
+                                                    <option>Yes</option>
+                                                    <option>No</option>
+                                                </select>
+                                            </div>
+                                            
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                             <div class="form-group col-sm-4">
+                                                <label for="inputState">Elevation</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose..</option>
+                                                    <option>East</option>
+                                                    <option>West</option>
+                                                    <option>North</option>
+                                                    <option>South</option>
+                                                    <option>North-East</option>
+                                                </select>
+                                            </div>
+                                            
+                                            <div class="form-group col-sm-8">  
+                                                <label for="inputState">Upload Some Pictures</label>
+                                                <div class="input-group image-preview">
+                                                    <input type="text" class="form-control image-preview-filename" disabled="disabled"> 
+                                                    <span class="input-group-btn">
+                                                        <!-- image-preview-input -->
+                                                        <div class="btn btn-default image-preview-input">
+                                                            <span class="glyphicon glyphicon-folder-open"></span>
+                                                            <span class="image-preview-input-title">Browse</span>
+                                                            <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12">
+                                                <label for="inputState">More Descreption</label>
+                                                <textarea class="form-control" rows="5" id="MoreDescreption"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row" style="text-align: center">
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Reset </button>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Done </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="panel panel-info" id="Land" style="display:none">
+                      <div class="panel-heading"><h4> Please fill all these Information </h4></div>
+                        <div class="panel-body" >
+                            <div class="container-fluid" style="margin-left: 30px;text-align: left">
+                                <div class="row col-sm-12">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">City</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Region</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Neighborhood</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                      
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyPrice">Property Price ($)</label>
+                                                <input type="text" class="form-control" id="PropertyPrice" placeholder="Enter Property Price">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyArea">Property Area (m2)</label>
+                                                <input type="text" class="form-control" id="PropertyArea" placeholder="Enter Property Area">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyAge">Property Age</label>
+                                                <input type="text" class="form-control" id="PropertyAge" placeholder="Enter Property Age">
+                                            </div>
+                                        </div>
+                                        
+                                       <div class="form-row">                                            
+                                            <div class="form-group col-sm-4" >
+                                                <label for="inputState">Elevation</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose..</option>
+                                                    <option>East</option>
+                                                    <option>West</option>
+                                                    <option>North</option>
+                                                    <option>South</option>
+                                                    <option>North-East</option>
+                                                </select>
+                                            </div>                                            
+                                            <div class="form-group col-sm-8" >  
+                                                <label for="inputState">Upload Some Pictures</label>
+                                                <div class="input-group image-preview">
+                                                    <input type="text" class="form-control image-preview-filename" disabled="disabled"> 
+                                                    <span class="input-group-btn">
+                                                        <!-- image-preview-input -->
+                                                        <div class="btn btn-default image-preview-input">
+                                                            <span class="glyphicon glyphicon-folder-open"></span>
+                                                            <span class="image-preview-input-title">Browse</span>
+                                                            <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>                                   
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12">
+                                                <label for="inputState">More Descreption</label>
+                                                <textarea class="form-control" rows="5" id="MoreDescreption"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row" style="text-align: center">
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Reset </button>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Done </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="panel panel-info" id="Building" style="display:none">
+                      <div class="panel-heading"><h4> Please fill all these Information </h4></div>
+                        <div class="panel-body" >
+                            <div class="container-fluid" style="margin-left: 30px;text-align: left">
+                                <div class="row col-sm-12">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">City</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4" >
+                                                <label for="inputState">Region</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Neighborhood</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                      
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyPrice">Property Price ($)</label>
+                                                <input type="text" class="form-control" id="PropertyPrice" placeholder="Enter Property Price">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyArea">Property Area (m2)</label>
+                                                <input type="text" class="form-control" id="PropertyArea" placeholder="Enter Property Area">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyAge">Property Age</label>
+                                                <input type="text" class="form-control" id="PropertyAge" placeholder="Enter Property Age">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">  
+                                                <label for="inputState">Number of Appartments</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="quantity-left-minus2 btn btn-danger btn-number"  data-type="minus" data-field="">
+<!--                                                          <span class="glyphicon glyphicon-minus"></span>-->
+                                                              <i class="fa fa-minus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" id="quantity2" name="quantity2" class="form-control input-number" value="1" min="1" max="100" style="text-align: center">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="quantity-right-plus2 btn btn-success btn-number" data-type="plus" data-field="">
+<!--                                                            <span class="glyphicon glyphicon-plus"></span>-->
+                                                                <i class="fa fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                            <div class="form-group col-sm-4">  
+                                                <label for="inputState">Number of Floors</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="quantity-left-minus3 btn btn-danger btn-number"  data-type="minus" data-field="">
+                                                          <span class="glyphicon glyphicon-minus"></span>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" id="quantity3" name="quantity3" class="form-control input-number" value="1" min="1" max="100" style="text-align: center">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="quantity-right-plus3 btn btn-success btn-number" data-type="plus" data-field="">
+                                                            <span class="glyphicon glyphicon-plus"></span>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>  
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Elevation</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose..</option>
+                                                    <option>East</option>
+                                                    <option>West</option>
+                                                    <option>North</option>
+                                                    <option>South</option>
+                                                    <option>North-East</option>
+                                                </select>
+                                            </div>
+  
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12">  
+                                                <label for="inputState">Upload Some Pictures</label>
+                                                <div class="input-group image-preview">
+                                                    <input type="text" class="form-control image-preview-filename" disabled="disabled"> 
+                                                    <span class="input-group-btn">
+                                                        <!-- image-preview-input -->
+                                                        <div class="btn btn-default image-preview-input">
+                                                            <span class="glyphicon glyphicon-folder-open"></span>
+                                                            <span class="image-preview-input-title">Browse</span>
+                                                            <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12">
+                                                <label for="inputState">More Descreption</label>
+                                                <textarea class="form-control" rows="5" id="MoreDescreption"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-row" style="text-align: center">
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Reset </button>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Done </button>
+                                            </div>
+                                        </div>
+                                   
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                <div class="panel panel-info" id="Office" style="display:none">
+                      <div class="panel-heading"><h4> Please fill all these Information </h4></div>
+                        <div class="panel-body" >
+                            <div class="container-fluid" style="margin-left: 30px;text-align: left">
+                                <div class="row col-sm-12">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">City</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Region</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Neighborhood</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                      
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyPrice">Property Price ($)</label>
+                                                <input type="text" class="form-control" id="PropertyPrice" placeholder="Enter Property Price">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyArea">Property Area (m2)</label>
+                                                <input type="text" class="form-control" id="PropertyArea" placeholder="Enter Property Area">
+                                            </div>
+                                            <div class="form-group col-sm-4">
+                                                <label for="PropertyAge">Property Age</label>
+                                                <input type="text" class="form-control" id="PropertyAge" placeholder="Enter Property Age">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-4">  
+                                                <label for="inputState">Number of Rooms</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="quantity-left-minus4 btn btn-danger btn-number"  data-type="minus" data-field="">
+<!--                                                          <span class="glyphicon glyphicon-minus"></span>-->
+                                                              <i class="fa fa-minus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" id="quantity4" name="quantity4" class="form-control input-number" value="1" min="1" max="100" style="text-align: center">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="quantity-right-plus4 btn btn-success btn-number" data-type="plus" data-field="">
+<!--                                                            <span class="glyphicon glyphicon-plus"></span>-->
+                                                             <i class="fa fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>                                            
+                                            <div class="form-group col-sm-4">  
+                                                <label for="inputState">Number of Floors</label>
+                                                <div class="input-group">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="quantity-left-minus5 btn btn-danger btn-number"  data-type="minus" data-field="">
+<!--                                                          <span class="glyphicon glyphicon-minus"></span>-->
+                                                              <i class="fa fa-minus"></i>
+                                                        </button>
+                                                    </span>
+                                                    <input type="text" id="quantity5" name="quantity5" class="form-control input-number" value="1" min="1" max="100" style="text-align: center">
+                                                    <span class="input-group-btn">
+                                                        <button type="button" class="quantity-right-plus5 btn btn-success btn-number" data-type="plus" data-field="">
+<!--                                                            <span class="glyphicon glyphicon-plus"></span>-->
+                                                                <i class="fa fa-plus"></i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>  
+                                            <div class="form-group col-sm-4">
+                                                <label for="inputState">Elevation</label>
+                                                <select id="inputState" class="form-control">
+                                                    <option selected>Choose..</option>
+                                                    <option>East</option>
+                                                    <option>West</option>
+                                                    <option>North</option>
+                                                    <option>South</option>
+                                                    <option>North-East</option>
+                                                </select>
+                                            </div>
+  
+                                        </div>
+                                   
+                                        <div class="form-row">                              
+                                            <div class="form-group col-sm-12">  
+                                                <label for="inputState">Upload Some Pictures</label>
+                                                <div class="input-group image-preview">
+                                                    <input type="text" class="form-control image-preview-filename" disabled="disabled"> 
+                                                    <span class="input-group-btn">
+                                                        <!-- image-preview-input -->
+                                                        <div class="btn btn-default image-preview-input">
+                                                            <span class="glyphicon glyphicon-folder-open"></span>
+                                                            <span class="image-preview-input-title">Browse</span>
+                                                            <input type="file" accept="image/png, image/jpeg, image/gif" name="input-file-preview"/>
+                                                        </div>
+                                                    </span>
+                                                </div>
+                                            </div>                                    
+  
+                                        </div>
+                                   
+                                        <div class="form-row">
+                                            <div class="form-group col-sm-12">
+                                                <label for="inputState">More Descreption</label>
+                                                <textarea class="form-control" rows="5" id="MoreDescreption"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-row" style="text-align: center">
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Reset </button>
+                                            </div>
+                                            <div class="form-group col-sm-6">
+                                                <button type="button" class="btn btn-warning btn-lg"> Done </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>            
+            
+                
+                </div>                   
+            </div>
+        </div>
+    </div>
+       
+<!-- footer -->
+   <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <br>
+<!--                    <h2 class="logo"><a href="#"> LOGO </a></h2>-->
+                    <img src="img/logo.PNG" class="img-circle" width="130px" height="130px">
+                </div>
+                <div class="col-sm-2">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Sign-Up.html">Sign up</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="About%20us.html">Company Information</a></li>
+                        <li><a href="ContactUs.html">Contact us</a></li>
+                        <li><a href="#">Common Question</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="AdvertisementPage.html">Advertisement</a></li>
+                        <li><a href="#">Clients</a></li>
+                        <li><a href="#">Recently added</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <div class="social-networks">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                    <button type="button" class="btn btn-warning"><a href="ContactUs.html" style="color: white">Contact us</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p> © 2018 Copyright Text </p>
+        </div>
+    </footer>
+<!-- /footer -->
+            <script>
+                window.onscroll = function() {myFunction()};
+
+                var navbar = document.getElementById("navbar");
+                var sticky = navbar.offsetTop;
+
+                function myFunction() {
+                  if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                  } else {
+                    navbar.classList.remove("sticky");
+                  }
+                }
+            </script> 
+    
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script>
+        $('#dbType').on('change',function(){
+         var selection = $(this).val();
+            switch(selection){
+                    case "House":
+                        $("#House").show();$("#Appartment").hide();$("#Villa").hide();
+                        $("#Land").hide();$("#Building").hide();$("#Office").hide();
+                        break;
+                    case "Appartment":
+                        $("#Appartment").show();$("#House").hide(); $("#Villa").hide();
+                        $("#Land").hide();$("#Building").hide();$("#Office").hide();
+                        break;
+                    case "Villa":
+                        $("#Villa").show();$("#House").hide(); $("#Appartment").hide();
+                        $("#Land").hide();$("#Building").hide();$("#Office").hide();
+                        break;
+                    case "Land":
+                        $("#Land").show();$("#House").hide(); $("#Appartment").hide();
+                        $("#Villa").hide(); $("#Building").hide();$("#Office").hide();
+                        break;
+                    case "Building":
+                        $("#Building").show();$("#House").hide(); $("#Appartment").hide();
+                        $("#Villa").hide(); $("#Land").hide();$("#Office").hide();
+                        break;
+                    case "Office":
+                        $("#Office").show();$("#House").hide(); $("#Appartment").hide();
+                        $("#Villa").hide(); $("#Land").hide();$("#Building").hide();
+                        break;
+                    case "Choose..":
+                        $("#Office").hide();$("#House").hide(); $("#Appartment").hide();
+                        $("#Villa").hide(); $("#Land").hide();$("#Building").hide();
+                        break;
+                default:
+                    $("#House").hide(); $("#Appartment").hide();
+                    $("#Villa").hide(); $("#Land").hide();
+                    $("#Building").hide();$("#Office").hide();
+            }
+       });
+    </script>
+
+     <script>
+        $(document).ready(function(){
+        var quantity=1;
+           $('.quantity-right-plus').click(function(e){
+                // Stop acting like a button
+                e.preventDefault();
+                // Get the field name
+                var quantity = parseInt($('#quantity').val());
+                // If is not undefined
+                    $('#quantity').val(quantity + 1);
+                    // Increment
+            });
+             $('.quantity-left-minus').click(function(e){
+                // Stop acting like a button
+                e.preventDefault();
+                // Get the field name
+                var quantity = parseInt($('#quantity').val());
+                // If is not undefined
+                    // Increment
+                    if(quantity>1){
+                    $('#quantity').val(quantity - 1);
+                    }
+            });
+        });
+    </script>
+    <script>
+    $(document).ready(function(){
+        var quantity2=1;
+        $('.quantity-right-plus2').click(function(e){
+                // Stop acting like a button
+                e.preventDefault();
+                // Get the field name
+                var quantity2 = parseInt($('#quantity2').val());
+                // If is not undefined
+                $('#quantity2').val(quantity2 + 1);
+                    // Increment
+                });
+        $('.quantity-left-minus2').click(function(e){
+                // Stop acting like a button
+                e.preventDefault();
+                // Get the field name
+                var quantity2 = parseInt($('#quantity2').val());
+                // If is not undefined
+                    // Increment
+                    if(quantity2>1){
+                        $('#quantity2').val(quantity2 - 1);
+                    }
+                });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        var quantity3=1;
+        $('.quantity-right-plus3').click(function(e){
+                // Stop acting like a button
+                e.preventDefault();
+                // Get the field name
+                var quantity3 = parseInt($('#quantity3').val());
+                // If is not undefined
+                $('#quantity3').val(quantity3 + 1);
+                    // Increment
+                });
+        $('.quantity-left-minus3').click(function(e){
+                // Stop acting like a button
+                e.preventDefault();
+                // Get the field name
+                var quantity3 = parseInt($('#quantity3').val());
+                // If is not undefined
+                    // Increment
+                    if(quantity3>1){
+                        $('#quantity3').val(quantity3 - 1);
+                    }
+                });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        var quantity4=1;
+        $('.quantity-right-plus4').click(function(e){
+                // Stop acting like a button
+                e.preventDefault();
+                // Get the field name
+                var quantity4 = parseInt($('#quantity4').val());
+                // If is not undefined
+                $('#quantity4').val(quantity4 + 1);
+                    // Increment
+                });
+        $('.quantity-left-minus4').click(function(e){
+                // Stop acting like a button
+                e.preventDefault();
+                // Get the field name
+                var quantity4 = parseInt($('#quantity4').val());
+                // If is not undefined
+                    // Increment
+                    if(quantity4>1){
+                        $('#quantity4').val(quantity4 - 1);
+                    }
+                });
+    });
+</script>
+<script>
+    $(document).ready(function(){
+        var quantity5=1;
+        $('.quantity-right-plus5').click(function(e){
+                // Stop acting like a button
+                e.preventDefault();
+                // Get the field name
+                var quantity5 = parseInt($('#quantity5').val());
+                // If is not undefined
+                $('#quantity5').val(quantity5 + 1);
+                    // Increment
+                });
+        $('.quantity-left-minus5').click(function(e){
+                // Stop acting like a button
+                e.preventDefault();
+                // Get the field name
+                var quantity5 = parseInt($('#quantity5').val());
+                // If is not undefined
+                    // Increment
+                    if(quantity5>1){
+                        $('#quantity5').val(quantity5 - 1);
+                    }
+                });
+    });
+</script>
+  
+    </body>
+</html>

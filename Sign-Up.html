@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Sign Up</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <style>
+       body{
+           background-image: url(img/background.jpg);
+           background-attachment:fixed;
+           background-size:cover;
+       }
+       #wrapper{
+          position: absolute;
+          margin: 30px auto;
+/*          top: 0;*/
+          right: 0;
+/*          bottom: 0;*/
+          left: 0;
+          width: 70%;
+/*          height: 350px;*/
+          background-color: rgba(147, 184, 189,0.8);
+          border-radius: 10px;
+        }
+       #wrapper label{
+/*            color: lightskyblue;*/
+           padding: 5px;
+           border-radius: 5px;
+           color: #fff;
+           position: relative;
+           background-color: rgba(3,155,230,0.5);
+           border-radius:10px;
+        }
+       .form-row{
+           margin: 10px
+       }
+    
+   </style>
+</head>
+<body>
+<div class="container">
+    <div class="row" style="text-align: center">
+        <h1 class="col-sm-12">
+            <a href="index.html">
+                <img src="img/logo.PNG" class="img-circle" width="110px" height="110px">
+            </a>
+        </h1>
+    </div>                
+<form id="wrapper">
+  <div class="form-row">
+        <div class="form-group col-sm-4">
+          <label for="FirstName">First Name</label>
+          <input type="text" class="form-control" id="FirstName" placeholder="Your First Name">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="MiddleName">Middle Name</label>
+          <input type="text" class="form-control" id="MiddleName" placeholder="Your Middle Name">
+        </div>
+        <div class="form-group col-sm-4">
+          <label for="LastName">Last Name</label>
+          <input type="text" class="form-control" id="LastName" placeholder="Your Last Name">
+        </div>
+  </div>
+    
+  <div class="form-row">
+    <div class="form-group col-sm-4">
+      <label for="Gender">Your Gender</label>
+      <select id="Gender" class="form-control">
+        <option selected>Female</option>
+        <option>Male</option>
+      </select>
+    </div>
+    <div class="form-group col-sm-4">
+      <label for="MobileNumber">Mobile Number</label>
+      <input type="text" class="form-control" id="MobileNumber" placeholder="Enter Your Mobile Number">
+    </div>
+    <div class="form-group col-sm-4">
+      <label for="CreditCard">Credit Card Number</label>
+      <input type="text" class="form-control" id="CreditCard" placeholder="Enter Your Credit Card Number">
+    </div> 
+  </div>
+    
+  <div class="form-row">   
+    <div class="form-group col-sm-4">
+      <label for="Email">Email</label>
+      <input type="email" class="form-control" id="Email" placeholder="Enter Your Email">
+    </div>
+    <div class="form-group col-sm-4">
+      <label for="Password">Password</label>
+      <input type="password" class="form-control" id="Password" placeholder="Your Password">
+    </div>
+    <div class="form-group col-sm-4">
+      <label for="ConfirmePassword">Confirme Your Password</label>
+      <input type="password" class="form-control" id="ConfirmePassword" placeholder="Confirme Your Password">
+    </div>
+  </div>
+    
+
+  <div class="form-row">
+    <div class="form-group col-sm-4">
+      <label for="inputState">City</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+      
+    <div class="form-group col-sm-4">
+      <label for="inputState">Region</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+      
+    <div class="form-group col-sm-4">
+      <label for="inputState">Street</label>
+      <select id="inputState" class="form-control">
+        <option selected>Choose...</option>
+        <option>...</option>
+      </select>
+    </div>
+  </div>
+    
+  <div class="form-row">   
+    <div class="form-group col-sm-6">
+        <h4><button type="submit" class="btn btn-warning"> Sign Up </button></h4>
+    </div>
+    <div class="form-group col-sm-6" style="text-align: right">
+        <h4 style="color:rgba(72,66,70,0.6)"> Already a member ?
+            <a href="Login.html" class="btn btn-warning"> Go and Login </a>
+        </h4>
+    </div>
+  </div>
+    
+</form>
+</div>
+</body>
+</html>

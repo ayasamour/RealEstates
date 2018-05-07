@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="css/Details.css">
+
+
+        <style type="text/css">
+                #selectPropertyType{
+                  width: 30%;
+                  left: 50%;
+                  right: auto;
+                  text-align: center;
+                  transform: translate(-50%, 0);
+                } 
+                .image-preview-input {
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0px;    
+                    color: #333;
+                    background-color: #fff;
+                    border-color: #ccc;    
+                }
+                .image-preview-input input[type=file] {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    margin: 0;
+                    padding: 0;
+                    font-size: 20px;
+                    cursor: pointer;
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                }
+                .image-preview-input-title {
+                    margin-left:2px;
+                }
+
+                label{
+    /*           color: lightskyblue;*/
+                   padding: 5px;
+                   border-radius: 5px;
+                   color: #fff;
+                   position: relative;
+                   background-color: rgba(3,155,230,0.8);
+                   border-radius:10px;
+                }
+               .form-row{
+                   margin: 10px
+               }
+        </style>
+    
+    </head>
+<body> 
+    
+<div class="container-fluid" style="background:url(img/backgroundbody2.jpg);background-position: center;
+                                    background-repeat: no-repeat; background-size: cover">
+        <br>
+        <br>
+        <br>
+          <header class="header-login-signup">
+                <div class="row header-limiter">
+                    <div class="col-md-4">
+                        <ul>
+                            <li><a href="Login.html">Login</a></li>
+                            <li><a href="Sign-Up.html" class="btn btn-warning" role="button">Sign up</a></li>
+                        </ul>
+                        <span> </span>
+                    </div>
+                   
+                    <div class="col-md-4">
+                        <h1>
+                            <a href="index.html">
+                                <img src="img/logo.PNG" class="img-circle" width="110px" height="110px">
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="col-md-4">
+                         <form class="form-inline active-pink-4">
+                             <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" aria-label="Search">
+                             <i class="fa fa-search" aria-hidden="true"></i>
+                         </form>
+                    </div>
+                </div>
+            </header>
+       <br>
+       <br>
+</div>
+    
+<div class="container-fluid">   
+    <nav id="navbar" class="navbar navbar-default" style="z-index:55555555;margin:0px">
+    <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+        <!--      <a class="navbar-brand" href="#">Brand</a>-->
+              <a class="navbar-brand" href="#"></a>
+        </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+                <ul class="nav navbar-nav navbar-right"  style="width:75%;margin:auto">
+                    <li><a href="index.html">Home <span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Properties <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="AdvertisementPage.html">House</a></li>
+                            <li><a href="AdvertisementPage.html">Apartment</a></li>
+                            <li><a href="AdvertisementPage.html">Villa</a></li>
+                            <li><a href="AdvertisementPage.html">Building</a></li>
+                            <li><a href="AdvertisementPage.html">Office</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="About%20us.html">About us</a></li>
+                    <li><a href="ContactUs.html">Call Us</a></li>
+                    <li><a href="AddProperty.html" class="btn btn-warning" role="button">Add My Property</a></li>
+            </ul>
+        </div> 
+    </div><!-- /.container -->
+    </nav>
+</div> 
+<br>
+  
+         <div class="container">
+            <div class="container form-top">
+                                           <h1 class="row" style="text-align: center;color: dodgerblue"> Contact Us </h1>
+                <br>
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                        <div class="panel panel-info" style="border-radius: 10px">
+                            <div class="panel-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label >Name</label>
+                                        <input type="text" name="name" required class="form-control" placeholder="Enter Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Email</label>
+                                        <input type="email" name="email" required class="form-control" placeholder="Enter Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label >Message</label>
+                                        <textarea rows="3" name="message" class="form-control" placeholder="Type Your Message"></textarea>
+                                    </div>
+                                    <br>
+                                    <div class="form-group" style="text-align: center">
+                                        <button class="btn btn-raised btn-lg btn-warning" type="submit">Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    
+    
+    <br>
+<!-- footer -->
+   <footer id="myFooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <br>
+<!--                    <h2 class="logo"><a href="#"> LOGO </a></h2>-->
+                    <img src="img/logo.PNG" class="img-circle" width="130px" height="130px">
+                </div>
+                <div class="col-sm-2">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Sign-Up.html">Sign up</a></li>
+                        <li><a href="Login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="About%20us.html">Company Information</a></li>
+                        <li><a href="ContactUs.html">Contact us</a></li>
+                        <li><a href="#">Common Question</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-2">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="AdvertisementPage.html">Advertisement</a></li>
+                        <li><a href="#">Clients</a></li>
+                        <li><a href="#">Recently added</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <div class="social-networks">
+                        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="google"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                    <button type="button" class="btn btn-warning"><a href="ContactUs.html" style="color: white">Contact us</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p> © 2018 Copyright Text </p>
+        </div>
+    </footer>
+<!-- /footer -->
+            <script>
+                window.onscroll = function() {myFunction()};
+
+                var navbar = document.getElementById("navbar");
+                var sticky = navbar.offsetTop;
+
+                function myFunction() {
+                  if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                  } else {
+                    navbar.classList.remove("sticky");
+                  }
+                }
+            </script> 
+    
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+    </body>
+</html>
